@@ -60,7 +60,7 @@ import "./IWhitelist.sol";
         require(whitelist.whitelistedAddresses(msg.sender), "This address is not whitelisted and cannot mint.");
         require(tokenIds < maxTokenIds, "Exceeded the limit.");
         require(msg.value >= _price, "Ether sent is not sufficient ");
-        token += 1;
+        tokenIds += 1;
 
 
         //_safeMint is a safer version of the _mint function as it ensures that
@@ -77,7 +77,7 @@ import "./IWhitelist.sol";
         require(tokenIds < maxTokenIds, "Exceeded the limit.");
         require(msg.value >= _price, "Ether sent is not sufficient ");
 
-        token += 1;
+        tokenIds += 1;
         _safeMint(msg.sender, tokenIds);
 
     }

@@ -11,7 +11,7 @@ async function main() {
   A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts,
   so cryptoDevsContract here is a factory for instances of our CryptoDevs contract.
   */
-  const cryptoDevsContract = await ethers.getContractFactory("CryptoDevs");
+  const cryptoDevsContract = await ethers.getContractFactory("AgrimCryptoDevs");
 
   // deploy the contract
   const deployedCryptoDevsContract = await cryptoDevsContract.deploy(
